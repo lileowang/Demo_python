@@ -49,4 +49,13 @@ Namespaces are one honking great idea -- let's do more of those!
 >>> inspect.getfile(this)
 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python36_64\\lib\\this.py'
 
-
+# swap with exclusive or
+>>> a = 2
+>>> b = 3
+>>> a ^= b
+>>> b ^= a
+>>> a ^= b
+>>> a
+3
+>>> b
+2
