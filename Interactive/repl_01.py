@@ -59,3 +59,11 @@ Namespaces are one honking great idea -- let's do more of those!
 3
 >>> b
 2
+
+# matrix transpose with nested list comprehension
+>>> a = [[1, 2, 3], [4, 5, 6]]
+>>> a
+[[1, 2, 3], [4, 5, 6]]
+>>> [[r[i] for r in a] for i in range(3)]
+[[1, 4], [2, 5], [3, 6]]
+
