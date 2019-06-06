@@ -67,3 +67,9 @@ Namespaces are one honking great idea -- let's do more of those!
 >>> [[r[i] for r in a] for i in range(3)]
 [[1, 4], [2, 5], [3, 6]]
 
+# dot product with generator expression to implicitly yield iterator
+>>> b = [1, 2, 3]
+>>> c = [4, 5, 6]
+>>> list(x * y for x, y in zip(b, c))
+[4, 10, 18]
+
