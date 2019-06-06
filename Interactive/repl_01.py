@@ -44,3 +44,9 @@ Namespaces are one honking great idea -- let's do more of those!
 >>> [d for d in dir(a) if '__' not in d]
 ['append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
 
+# locate file
+>>> import inspect
+>>> inspect.getfile(this)
+'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python36_64\\lib\\this.py'
+
+
