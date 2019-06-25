@@ -11,9 +11,17 @@
 
 import sys
 import socket_server
+import socket_client
 
 def main():
-    socket_server.Run()
+    
+    # test socket: 
+    # - run server first: ctrl + F5
+    # - then run client: ctrl + F5
+    # - monitor with: netstat -an | find "5151"
+    #socket_server.Run()
+    socket_client.Run()
+
     input('\nEnd')
 
 if __name__ == "__main__":

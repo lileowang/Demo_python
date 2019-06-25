@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Demo.py" />
+    <Compile Include="socket_client.py" />
     <Compile Include="socket_server.py">
       <SubType>Code</SubType>
     </Compile>
