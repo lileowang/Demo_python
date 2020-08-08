@@ -1,0 +1,13 @@
+# Environments
+.venv
+.vscode
+.vs
+*.vcxproj.user
+Debug/
+
+# Build
+build/
+__pycache__/
+#*.c
+*.html
+#*.pyd
