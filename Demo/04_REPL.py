@@ -69,3 +69,76 @@ In [56]: r = p.sub(lambda m: str(int(m.group(1)) + int(m.group(2))), s)
 In [57]: r
 Out[57]: 'if 4 is 4 then 3+7 is 10'
 
+# numpy: create array
+In [2]: import numpy as np
+
+In [43]: a = np.ones([5, 5])
+
+In [44]: a
+Out[44]:
+array([[1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1.]])
+
+In [45]: b = np.zeros([3, 3])
+
+In [46]: b
+Out[46]:
+array([[0., 0., 0.],
+       [0., 0., 0.],
+       [0., 0., 0.]])
+
+In [47]: b[1, 1] = 9
+
+In [48]: b
+Out[48]:
+array([[0., 0., 0.],
+       [0., 9., 0.],
+       [0., 0., 0.]])
+
+In [49]: a[1:-1, 1:-1] = b
+
+In [51]: a
+Out[51]:
+array([[1., 1., 1., 1., 1.],
+       [1., 0., 0., 0., 1.],
+       [1., 0., 9., 0., 1.],
+       [1., 0., 0., 0., 1.],
+       [1., 1., 1., 1., 1.]])
+
+# numpy: indexing with boolean array
+In [2]: import numpy as np
+
+In [3]: a = np.arange(15)
+
+In [4]: a
+Out[4]: array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14])
+
+In [6]: a = np.arange(15).reshape(3, 5)
+In [7]: a
+Out[7]:
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14]])
+
+In [14]: b = a > 4
+
+In [15]: b
+Out[15]:
+array([[False, False, False, False, False],
+       [ True,  True,  True,  True,  True],
+       [ True,  True,  True,  True,  True]])
+
+In [16]: a[b]
+Out[16]: array([ 5,  6,  7,  8,  9, 10, 11, 12, 13, 14])
+
+In [19]: a[b] = 99
+
+In [20]: a
+Out[20]:
+array([[ 0,  1,  2,  3,  4],
+       [99, 99, 99, 99, 99],
+       [99, 99, 99, 99, 99]])
+

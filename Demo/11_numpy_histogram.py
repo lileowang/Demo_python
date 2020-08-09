@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 rg = np.random.default_rng(1)
+# mu: mean, sigma: standard deviation
 mu, sigma = 2, 0.5
 v = rg.normal(mu, sigma, 10_000)
 
