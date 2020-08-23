@@ -16,7 +16,7 @@ from itertools import islice
 
 space = '  '
 branch = '|  '
-mid = '|--'
+mid = '|——' # em-dash: Alt + 0151 (numeric keyboard)
 last = '|__'
 
 
