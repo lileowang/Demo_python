@@ -62,14 +62,14 @@ def tree(folder: Path,
         for marker, path in zip(markers, contents):
             if path.is_dir():
                 # enclose folder name with square brackets []
-                yield prefix + marker + '[' + path.name + ']'
+                yield prefix + marker + '/' + path.name + '/'
                 dirs += 1
                 extension = branch if marker == mid else space
                 yield from inner(path,
                                  prefix=prefix + extension,
                                  depth=depth - 1)
             elif not dir_only:
-                yield prefix + marker + path.name
+                yield prefix + marker + ' ' + path.name
                 files += 1
 
     # end: inner()
